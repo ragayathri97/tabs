@@ -1,0 +1,149 @@
+  <section class="tab-sec">
+    <div class="content-width">
+    <div class="list-part">
+      <ul class="flex-element">
+        <li class="active">One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>four</li>
+        <li>Five</li>
+      </ul>
+  
+      <div class="tab-content">
+        <div class="tab-content-inner active">
+  
+          <div class="flex-element">
+            <div>
+              <h3>1     bkjbcvjbclknclkn</h3>
+              <p>kjhvkjhbcdkjbjcblkjbcv;kjdbec;kjebc;kjbnc;kj cdl lhb ldhbclsbclbdlkbckl</p>
+            </div>
+            <div>
+              <img src="https://www.manageengine.com/appcreator/images/lc-workflow-builder.png" alt="">
+            </div>
+          </div>
+          
+        </div>
+        <div class="tab-content-inner ">
+          <div class="flex-element">
+            <div>
+              <h3>2    bkjbcvjbclknclkn</h3>
+              <p>kjhvkjhbcdkjbjcblkjbcv;kjdbec;kjebc;kjbnc;kj cdl lhb ldhbclsbclbdlkbckl</p>
+            </div>
+            <div>
+              <img src="https://www.manageengine.com/appcreator/images/lc-workflow-builder.png" alt="">
+            </div>
+  
+          </div>
+          
+        </div>
+        <div class="tab-content-inner ">
+          <div class="flex-element">
+            <div>
+              <h3>3    bkjbcvjbclknclkn</h3>
+              <p>kjhvkjhbcdkjbjcblkjbcv;kjdbec;kjebc;kjbnc;kj cdl lhb ldhbclsbclbdlkbckl</p>
+            </div>
+            <div>
+              <img src="https://www.manageengine.com/appcreator/images/lc-workflow-builder.png" alt="">
+            </div>
+  
+          </div>
+          
+        </div>
+        <div class="tab-content-inner ">
+          <div class="flex-element">
+            <div>
+              <h3>4   bkjbcvjbclknclkn</h3>
+              <p>kjhvkjhbcdkjbjcblkjbcv;kjdbec;kjebc;kjbnc;kj cdl lhb ldhbclsbclbdlkbckl</p>
+            </div>
+            <div>
+              <img src="https://www.manageengine.com/appcreator/images/lc-workflow-builder.png" alt="">
+            </div>
+  
+          </div>
+          
+        </div>
+        <div class="tab-content-inner ">
+          <div class="flex-element">
+            <div>
+              <h3>5   bkjbcvjbclknclkn</h3>
+              <p>kjhvkjhbcdkjbjcblkjbcv;kjdbec;kjebc;kjbnc;kj cdl lhb ldhbclsbclbdlkbckl</p>
+            </div>
+            <div>
+              <img src="https://www.manageengine.com/appcreator/images/lc-workflow-builder.png" alt="">
+            </div>
+  
+          </div>
+          
+        </div>
+  
+  
+      </div>
+  
+    </div>
+  
+    </div>
+  </section>
+  
+  
+  <script>
+  
+  
+  // jQuery
+  // $('.list-part li').on('click', function() {
+  // $(this).addClass('active').siblings().removeClass('active');
+  
+  // var thisIndex = $(this).index();
+  // $('.tab-content .tab-content-inner').fadeOut().removeClass('active');
+  // $('.tab-content .tab-content-inner').eq(thisIndex).fadeIn().addClass('active');
+  // });
+  // jQuery
+  
+  
+  // // without set time out for fadein and fade out
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   const tabs = document.querySelectorAll('.list-part ul li');
+  //   const contents = document.querySelectorAll('.tab-content-inner');
+  //   tabs.forEach((tab, index) => {
+  //     tab.addEventListener('click', () => {
+  //       tabs.forEach(t => t.classList.remove('active'));
+  //       tab.classList.add('active');
+  //       contents.forEach(content => content.classList.remove('active'));
+  //       contents[index].classList.add('active');
+  //     });
+  //   });
+  // });
+  // without set time out for fadein and fade out
+  
+  // with set time out for fadein and fade out
+   document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.list-part ul li');
+    const contents = document.querySelectorAll('.tab-content-inner');
+  
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(content => {
+          content.classList.remove('active');
+          content.style.opacity = 0;
+          setTimeout(() => {
+            content.style.display = 'none';
+          }, 200); // Duration of fade-out
+        });
+        const selectedContent = contents[index];
+        setTimeout(() => {
+          selectedContent.style.display = 'block';
+          setTimeout(() => {
+            selectedContent.style.opacity = 1;
+            selectedContent.classList.add('active');
+          }, 50); // Small delay to trigger fade-in
+        }, 200); // Duration of fade-out
+      });
+    });
+  });
+  // with set time out for fadein and fade out
+  
+  // End Accordion
+  </script>
+  
+  <!-- ********   TAB ********** -->

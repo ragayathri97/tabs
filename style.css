@@ -1,0 +1,43 @@
+    .content-width{
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 90px 0;
+    }
+    .flex-element{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }    
+    .list-part ul li{
+      padding: 12px 20px ;
+      border-radius: 10px;
+    border: 1px solid #333;
+      color:#000;
+      cursor: pointer;
+      margin-right: 40px;
+      list-style: none;
+    }
+
+    .tab-content{
+      min-height: 400px;
+    }
+    .list-part ul li.active{
+      background: #717171;
+      color: #fff;
+    }
+    .flex-element>div{
+      width: 48%;
+    }
+    .tab-content .tab-content-inner{
+      transition: opacity .2s ease;
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+    .tab-content .tab-content-inner.active{
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  
